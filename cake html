@@ -1,0 +1,276 @@
+<<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>cake checklist</title>
+</head>
+<body>
+  <h1 style=" color: firebrick; text-align: center; font-size: 70px">cake checklist</h1>
+  <label for="budget">cake Budget</label> <br> <input id="budget" type="number" ><br><br>
+  <label for="numberOfSlice">No of Slices &nbsp;</label><br><input id="numberOfSlice" type="number">
+  <form id="cakeform">
+  <table style="width:100%">
+      <tr><td><div id="div1">
+          <h3 style=" color: firebrick">Style of cake</h3>
+          <ul style="list-style-type:none;">
+              <li><input name="socake" type="checkbox" id="Traditional" > &nbsp; <label  for="Traditional">Traditional </label></li>
+              <li><input name="socake" type="checkbox" id="Contemporary"> &nbsp; <label  for="Contemporary">Contemporary</label></li>
+              <li><input name="socake" type="checkbox" id="Dramatic"> &nbsp; <label  for="Dramatic">Dramatic</label></li>
+              <li><input name="socake" type="checkbox" id="Ornate"> &nbsp; <label  for="Ornate">Ornate</label></li>
+              <li><input name="socake" type="checkbox" id="Simple"> &nbsp; <label  for="Simple">Simple</label></li>
+              <li><input name="socake" type="checkbox" id="Regal"> &nbsp; <label  for="Regal">Regal</label></li>
+              <li><input name="socake" type="checkbox" id="Unique"> &nbsp; <label  for="Unique">Unique</label></li>
+          </ul>
+      </div></td><td><div id="div2">
+          <h3 style=" color: firebrick; display: inline;">Decorations</h3> <p style="font-size:15px; display:inline; font-weight: 800;">$20/slice</p>
+
+          <ul style="list-style-type:none;">
+              <li><input name="deco" type="checkbox" class="decorations"  onclick="getTotal()" value="20" id="sugarFlowers"> &nbsp; <label for="sugarFlowers">Sugar Flowers </label></li>
+              <li><input name="deco" type="checkbox" class="decorations" onclick="getTotal()" value="decoration1" id="freshFlowers"> &nbsp; <label for="freshFlowers">Fresh Flowers</label></li>
+              <li><input name="deco" type="checkbox" class="decorations" onclick="getTotal()" value="decoration2" id="chocolateShavings"> &nbsp; <label for="chocolateShavings">Chocolate Shavings</label></li>
+              <li><input name="deco" type="checkbox" class="decorations" onclick="getTotal()" value="decoration3" id="goldorSilverleaf"> &nbsp; <label for="goldorSilverleaf">Gold or Silver Leaf</label></li>
+              <li><input name="deco" type="checkbox" class="decorations" onclick="getTotal()" value="decoration4" id="pearls"> &nbsp; <label for="pearls">Pearls</label></li>
+              <li><input name="deco" type="checkbox" class="decorations" onclick="getTotal()" value="decoration5" id="latticeWork"> &nbsp; <label for="latticeWork">Lattice Work</label></li>
+              <li><input name="deco" type="checkbox" class="decorations" onclick="getTotal()" value="decoration6" id="piping"> &nbsp; <label for="piping">Piping</label></li>
+              <li><input name="deco" type="checkbox" class="decorations" onclick="getTotal()" value="decoration7" id="cackeTop"> &nbsp; <label for="cackeTop">Cacke Top</label></li>
+          </ul>
+
+      </div></td><td><div id="div3">
+          <h3 style=" color: firebrick">Shape and Structre</h3>
+          <ul style="list-style-type:none">
+              <li><input name="shape" onclick="getTotal()" type="checkbox" value="shape1" id="round"> &nbsp; <label for="round">Round &nbsp;<span style="font-size:12px; display:inline; font-weight: 800;">$20</span></label></li>
+              <li><input name="shape" onclick="getTotal()" type="checkbox" value="shape2" id="oval"> &nbsp; <label for="oval">Oval &nbsp;<span style="font-size:12px; display:inline; font-weight: 800;">$40</span></label></li>
+              <li><input name="shape" onclick="getTotal()" type="checkbox" value="shape3" id="square"> &nbsp; <label for="square">Square &nbsp;<span style="font-size:12px; display:inline; font-weight: 800;">$30</span></label></li>
+              <li><input name="shape" onclick="getTotal()" type="checkbox" value="shape4" id="rectangular"> &nbsp; <label for="rectangular">Rectangular &nbsp;<span style="font-size:12px; display:inline; font-weight: 800;">$20</span></label></li>
+              <li><input name="shape" onclick="getTotal()" type="checkbox" value="shape5" id="heart"> &nbsp; <label for="heart">Heart &nbsp;<span style="font-size:12px; display:inline; font-weight: 800;">$50</span></label></li>
+              <li><input name="shape" onclick="getTotal()" type="checkbox" value="shape6" id="sheet"> &nbsp; <label for="sheet">Sheet &nbsp;<span style="font-size:12px; display:inline; font-weight: 800;">$40</span></label></li>
+              <li><input name="shape" onclick="getTotal()" type="checkbox" value="shape7" id="tieredWith"> &nbsp; <label for="tieredWith">Tiered (With columns) &nbsp;<span style="font-size:12px; display:inline; font-weight: 800;">$50</span></label></li>
+              <li><input name="shape" onclick="getTotal()" type="checkbox" value="shape8" id="tieredStacked"> &nbsp; <label for="tieredStacked">tieredStacked &nbsp;<span style="font-size:12px; display:inline; font-weight: 800;">$40</span></label></li>
+              <li><input name="shape" onclick="getTotal()" type="checkbox" value="shape9" id="cupCakes"> &nbsp; <label for="cupCakes">Cup Cakes &nbsp;<span style="font-size:12px; display:inline; font-weight: 800;">$20</span></label></li>
+          </ul>
+      </div></td></tr>
+      <tr><td><div id="div4">
+          <h3 style=" color: firebrick; display: inline;">Flavours and fillings</h3> <span style="font-size:15px; display:inline; font-weight: 800;">$10/slice</span>
+          <ul style="list-style-type:none">
+              <li><input name="flavor" type="checkbox"   onclick="getTotal()" id="chocolate"> &nbsp; <label for="chocolate">Chocolate</label></li>
+              <li><input name="flavor" type="checkbox"   onclick="getTotal()" id="chocolateMud"> &nbsp; <label for="chocolateMud">Chocolate Mud</label></li>
+              <li><input name="flavor" type="checkbox"   onclick="getTotal()" id="whiteChocolate"> &nbsp; <label for="whiteChocolate">White Chocolate</label></li>
+              <li><input name="flavor" type="checkbox"   onclick="getTotal()" id="mocha"> &nbsp; <label for="mocha">Mocha</label></li>
+              <li><input name="flavor" type="checkbox"   onclick="getTotal()" id="Truffle"> &nbsp; <label for="Truffle">Truffle</label>mousse
+              <li><input name="flavor" type="checkbox"   onclick="getTotal()" id="mousse"> &nbsp; <label for="mousse">Mousse</label></li>
+              <li><input name="flavor" type="checkbox"   onclick="getTotal()" id="caramal"> &nbsp; <label for="caramal">Caramal</label></li>
+              <li><input name="flavor" type="checkbox"  onclick="getTotal()" id="lemon"> &nbsp; <label for="lemon">Lemon/citrus</label></li>
+              <li><input name="flavor" type="checkbox"  onclick="getTotal()" id="orange"> &nbsp; <label for="orange">Orange</label></li>
+              <li><input name="flavor" type="checkbox"  onclick="getTotal()" id="carrot"> &nbsp; <label for="carrot">carrot(spice)</label></li>
+              <li><input name="flavor" type="checkbox"  onclick="getTotal()" id="berris"> &nbsp; <label for="berris">Berries & whipped cream</label></li>
+          </ul>
+      </div></td><td><div id="div5">
+          <h3 style=" color: firebrick; display: inline;">Colours</h3> <span style="font-size:15px; display:inline; font-weight: 800;">$5/slice</span>
+          <ul style="list-style-type:none">
+              <li><input name="color" type="checkbox"  onclick="getTotal()" id="whte"> &nbsp; <label for="whte">White</label></li>
+              <li><input name="color" type="checkbox"  onclick="getTotal()" id="ivory"> &nbsp; <label for="ivory">Ivory</label></li>
+              <li><input name="color" type="checkbox"  onclick="getTotal()" id="yellow"> &nbsp; <label for="yellow">Yellow</label></li>
+              <li><input name="color" type="checkbox"  onclick="getTotal()" id="peach"> &nbsp; <label for="peach">Peach</label></li>
+              <li><input name="color" type="checkbox"  onclick="getTotal()" id="red"> &nbsp; <label for="red">Red</label>mousse
+              <li><input name="color" type="checkbox"  onclick="getTotal()" id="pink"> &nbsp; <label for="pink">Pink</label></li>
+              <li><input name="color" type="checkbox"  onclick="getTotal()" id="lavender"> &nbsp; <label for="lavender">Lavender</label></li>
+              <li><input name="color" type="checkbox"  onclick="getTotal()" id="lemon"> &nbsp; <label for="lemon">Lemon/citrus</label></li>
+
+          </ul>
+      </div></td><td>
+
+
+      <b>Sub Total: _ _ _ _ _ _ _ _ _ _ _ _ _ <u></u></b><b id="subtotal"></b><br>
+      <b>tax: _ _ _ _ _ _ _ _ _ _ _ _ _ <u></u></b> <b id="tax"></b><br>
+      <b>Total Price: _ _ _ _ _ _ _ _ _ _ _ _ _ <u></u></b> <b id= "finaltotal"></b>
+
+
+      </td></tr>
+  </table>
+</form>
+
+
+
+
+
+  <script>
+
+
+
+
+
+
+
+     var theform=document.forms["cakeform"];
+
+     var cake_decoration_price = new Array();
+          cake_decoration_price['decoration1']=20;
+          cake_decoration_price['decoration2']=20;
+          cake_decoration_price['decoration3']=20;
+          cake_decoration_price['decoration4']=20;
+          cake_decoration_price['decoration5']=20;
+          cake_decoration_price['decoration6']=20;
+          cake_decoration_price['decoration7']=20;
+
+
+
+function getCakeDecoPrice()
+{
+  var cakeDecoPrice=0;
+
+  var theForm = document.forms["cakeform"];
+
+  var selectedDeco = theForm.elements["deco"];
+
+  for(var i = 0; i < selectedDeco.length; i++)
+  {
+
+      if(selectedDeco[i].checked)
+      {
+
+          cakeDecoPrice = 20;
+
+          break;
+      }
+  }
+
+  return cakeDecoPrice;
+}
+
+
+
+var cake_shape_price = new Array();
+   cake_shape_price['shape1']=20;
+   cake_shape_price['shape2']=40;
+   cake_shape_price['shape3']=30;
+   cake_shape_price['shape4']=20;
+   cake_shape_price['shape5']=50;
+   cake_shape_price['shape6']=40;
+   cake_shape_price['shape7']=50;
+   cake_shape_price['shape8']=40;
+   cake_shape_price['shape9']=20;
+
+
+
+
+function getCakeShapePrice()
+{
+var cakeShapePrice=0;
+
+var theForm = document.forms["cakeform"];
+
+var selectedShape = theForm.elements["shape"];
+
+for(var i = 0; i < selectedShape.length; i++)
+{
+
+if(selectedShape[i].checked)
+{
+
+   cakeShapePrice = cake_shape_price[selectedShape[i].value];
+
+   break;
+}
+}
+
+return cakeShapePrice;
+}
+
+
+
+
+
+function getCakeFlavorPrice()
+{
+var cakeFlavorPrice=0;
+//Get a reference to the form id="cakeform"
+var theForm = document.forms["cakeform"]
+//Get a reference to the cake the user Chooses name=selectedCake":
+var selectedFlavor = theForm.elements["flavor"];
+
+for(var i = 0; i < selectedFlavor.length; i++)
+{
+
+if(selectedFlavor[i].checked)
+{
+
+   cakeFlavorPrice = 10;
+
+   break;
+}
+}
+
+return cakeFlavorPrice;
+}
+
+function getCakeColorPrice()
+{
+var cakeColorPrice=0;
+//Get a reference to the form id="cakeform"
+var theForm = document.forms["cakeform"];
+//Get a reference to the cake the user Chooses name=selectedCake":
+var selectedColor = theForm.elements["color"];
+//Here since there are 4 radio buttons selectedCake.length = 4
+//We loop through each radio buttons
+for(var i = 0; i < selectedColor.length; i++)
+{
+//if the radio button is checked
+if(selectedColor[i].checked)
+{
+
+   cakeColorPrice = 5;
+
+   break;
+}
+}
+//We return the cakeSizePrice
+return cakeColorPrice;
+}
+
+
+function getshapeandstructure()
+
+
+
+
+function getTotal()
+{
+  var budget=document.getElementById('budget').value;
+  var slice=document.getElementById('numberOfSlice').value;
+  var a=parseInt(budget);
+  var b=parseInt(slice);
+  var total=a*b;
+
+
+
+  var cakePrice = getCakeDecoPrice() + getCakeShapePrice() + getCakeFlavorPrice() + getCakeColorPrice();
+
+  var tax=0.13*cakePrice;
+  var finaltotal=tax+cakePrice
+
+  if(cakePrice<=budget){
+
+  document.getElementById('subtotal').innerHTML = cakePrice;
+  document.getElementById('tax').innerHTML = tax;
+  document.getElementById('finaltotal').innerHTML = finaltotal;
+      }
+  else{
+      alert("please select price under budget");
+  }            
+
+}
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html> 
+
